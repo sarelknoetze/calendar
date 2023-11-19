@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="calendars">
+        <div class="container">
+            <div class="calendar">
+                <div class="calendarHeader">
+                    <span class="yearChange" id="preChange">
+                        <button onclick="preChange()"><pre><</pre></button>
+                        
+                    </span>
+                    <span class="monthPicker" id="monthPicker"></span>
+                    <span id="year"></span>
+                    <span class="yearChange" id="nextYear">
+                        <button onclick="nextChange()"><pre>></pre></button>
+                    </span>
+                </div>
+                <div class="calendarBody">
+                    <div class="calendarWeekDays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendarDays">
+                    </div>
+                </div>
+                <div class="monthList"></div>
+            </div>
+        </div>
+        <div class="form" style="display: none;">
+            
+            <div id="bookedDay">
+
+            </div>
+            <form action="">
+                <label for="bookingTimes">Please select booking time</label><br>
+                <div class="timesBtns">
+                    <button><input type="radio" name="times" id="seven">07:00</button>
+                    <button><input type="radio" name="times" id="seven30">07:30</button>
+                    <button><input type="radio" name="times" id="eight">08:00</button>
+                    <button><input type="radio" name="times" id="eight30">08:30</button>
+                    <button><input type="radio" name="times" id="nine">09:00</button>
+                    <button><input type="radio" name="times" id="nine30">09:30</button><br>
+                    <button><input type="radio" name="times" id="ten">10:00</button>
+                    <button><input type="radio" name="times" id="ten30">10:30</button>
+                    <button><input type="radio" name="times" id="eleven">11:00</button>
+                    <button><input type="radio" name="times" id="eleven30">11:30</button>
+                    <button><input type="radio" name="times" id="twelfe">12:00</button>
+                    <button><input type="radio" name="times" id="twelfe30">12:30</button><br>
+                    <button><input type="radio" name="times" id="thirteen">13:00</button>
+                    <button><input type="radio" name="times" id="thirteen30">13:30</button>
+                    <button><input type="radio" name="times" id="fourteen">14:00</button>
+                    <button><input type="radio" name="times" id="fourteen30">14:30</button>
+                    <button><input type="radio" name="times" id="fifthTeen">15:00</button>
+                    <button><input type="radio" name="times" id="fifthTeen30">15:30</button>
+                </div>
+                <label for="type">Please Select the type of treatment</label><br>
+                    <div class="treatment">
+                        <button><input type="radio" name="treatment" id="basicTreatment">Basic Traetment</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Hygiene Cut</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Dip</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Hair Cut</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Deshedding</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Trimming Cut</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Style Cut</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Tear Stain Removal</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">nails</button>
+                        <button><input type="radio" name="treatment" id="basicTreatment">Ear Cleaning</button>
+                    </div>
+                <button type="submit" id="submit">submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body{
+    place-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    background-color: rgb(234, 241, 241);
+  }
+
+  .calendars{
+    display: flex;
+  }
+  
+  .container{
+    position: relative;
+    display: flex;
+    padding: 2% 0 0 0;
+    justify-content: center;
+    top: 10%;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .calendar{
+    height: 510px;
+    width: max-content;
+    background-color: rgb(234, 241, 241);
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 30px 50px 0 50px;
+  }
+  
+  .calendarHeader{
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    padding: 10px;
+  }
+  
+  .calendarBody{
+    padding: 10px;
+  }
+  
+  .calendarWeekDays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(67, 66, 66);
+  }
+  
+
+  
+  .calendarWeekDays div{
+    display: grid;
+    place-items: center;
+    color: grey;
+    height: 50px;
+  }
+  
+  .calendarDays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    color: blue;
+  }
+  
+  .calendarDays div{
+    width: 37px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    animation: to-top 1s forwards;
+  }
+  
+  .monthPicker{
+    padding: 5px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .yearPicker{
+    display: flex;
+    align-items: center;
+  }
+  
+  .yearChange{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 1px 10px;
+    cursor: pointer;
+  }
+  
+  .calendarFooter{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .calendarDays div span{
+    position: absolute;
+  }
+  
+  .monthList{
+    position: relative;
+    left: 0;
+    top: -50px;
+    background-color: rgb(105, 110, 105);
+    color: green;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    border-radius: 20px;
+  }
+  .monthList > div{
+    display: grid;
+    place-content: center;
+    margin: 5px 10px;
+  }
+  
+  .monthList > div > div{
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .monthList .show{
+    visibility: visible;
+    pointer-events: visible;
+  }
+  
+  .monthList.hideonce{
+    visibility: hidden;
+  }
+  
+  .monthList.hide{
+    visibility: none;
+    pointer-events: none;
+  }
+  
+  .dateTimeFormat{
+    width: max-content;
+    display: inline;
+    height: max-content;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top: 140px;
+    justify-content: center;
+  }
+  
+  .dayTextFormat{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+    padding-right: 5%;
+    border-right: 3px solid white;
+    position: absolute;
+    left: -1rem;
+  }
+  
+  .dateTimeValue{
+    display: block;
+    height: max-content;
+    width: max-content;
+    position: relative;
+    left: 40%;
+    top: -18px;
+    text-align: center;
+  }
+  
+  .timeFormat{
+    font-size: 1.5rem;
+  }
+  
+  @keyframes to-top{
+    0%{
+      
+    }
+  }
+
+.dayButtons{
+    border: 0;
+    background-color: transparent;
+    color: blue;
+}
+
+
+
+.currentDate{
+    background-color: rgb(155, 158, 155);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.dayClicked{
+    background-color: blue;
+    color: white;
+    font-size: 100px;
+}
+
+/* Booking Times */
+
+.form{
+    width: 100%;
+    border: 0;
+    margin-right: 5%;
+    width: 50%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+#bookedDay{
+    color: black;
+    font-size: 20px;
+    margin: 3% 0;
+}
+
+label{
+    margin-bottom: 2%;
+}
+
+.timesBtns{
+    margin: 2% 0;
+}
+
+.treatment{
+    margin: 2% 0;
+}
+
+.timesBtns button{
+    color: blue;
+    border: 1px solid blue;
+    height: 30px;
+    width: 70px;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+
+.treatment button{
+    color: blue;
+    border: 1px solid blue;
+    height: 30px;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0 1%;
+    margin-bottom: 1%;
+}
+
+.timesBtns button input, .treatment button input{
+    margin-right: 3px;
+}
+
+#submit{
+    width: 50%;
+    height: 40px;
+    margin-top: 3%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    border: 0;
+    border-radius: 5px;
+}
